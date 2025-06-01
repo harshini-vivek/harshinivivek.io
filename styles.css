@@ -953,6 +953,96 @@ footer {
     transform: translateY(-5px);
 }
 
+.certification__container {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 20px;
+  margin-left: 10%;
+  margin-right: 10%;
+  cursor: pointer;
+  display: flex;
+  align-items: flex-start;
+  transition: transform 0.3s ease;
+}
+
+.certification__container:hover {
+  transform: translateY(-5px);
+}
+
+.certification__logo {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin-right: 15px;
+}
+
+.certification__info {
+  flex: 1;
+}
+
+.certification__title {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.certification__issued-by, .certification__date, .certification__skills {
+  margin-bottom: 5px;
+  font-size: 0.9rem;
+  color: #444;
+}
+
+.workshop{
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
+.workshop__container {
+  width: calc(50% - 50px); /* Adjust width as needed */
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  margin: 10px 20px;
+  overflow: hidden;
+  box-sizing: border-box;
+  transition: transform 0.3s ease-in-out;
+  vertical-align: top; /* Ensure alignment */
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.263); /* Optional: Add shadow for depth */
+
+}
+
+.workshop__title {
+  font-size: 1.2rem;
+  font-weight: bold;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  
+}
+
+.workshop__image {
+  width: auto;
+  height: 200px;
+  display: block;
+  margin: 10px auto;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
+
+.workshop__details {
+  padding: 10px;
+}
+
+.workshop__organized-by, .workshop__date {
+  margin-bottom: 5px;
+}
+
+.workshop__description {
+  margin-bottom: 10px;
+}
+
 /* Responsive Styles */
 @media screen and (max-width: 992px) {
     .about-content {
