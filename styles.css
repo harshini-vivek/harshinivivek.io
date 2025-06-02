@@ -955,7 +955,6 @@ footer {
 
 .certification__container {
   border: 1px solid #ccc;
-  color: #344e71
   border-radius: 8px;
   padding: 20px;
   margin-bottom: 20px;
@@ -1015,6 +1014,7 @@ footer {
 
 .workshop__title {
   font-size: 1.2rem;
+  color: #344e71;
   font-weight: bold;
   display: flex;
   flex-direction: column;
