@@ -10,6 +10,7 @@
     --transition: all 0.3s ease;
 }
 
+
 /* Base Styles */
 * {
     margin: 0;
@@ -31,7 +32,7 @@ a {
 }
 
 a:hover {
-    color: var(--accent-color);
+    color: var(--white);
 }
 
 .container {
@@ -50,11 +51,13 @@ a:hover {
     border-radius: 5px;
     cursor: pointer;
     transition: var(--transition);
+    
 }
 
 .btn:hover {
-    background: var(--secondary-color);
-    transform: translateY(-3px);
+    background: var(--accent-color);
+    /* transform: translateY(-3px); */
+    transform: scale(1.05);
 }
 
 section {
@@ -119,6 +122,11 @@ nav {
     font-weight: 600;
 }
 
+.nav-links :hover {
+    font-weight: 600;
+    color: var(--accent-color);
+}
+
 .menu-toggle {
     display: none;
     cursor: pointer;
@@ -140,7 +148,7 @@ nav {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    text-align: left;
+    text-align: center;
     background: linear-gradient(45deg, #e6eff6, #e4f2fc, #bdddf8, #9ccdf5);
     background-size: 400% 400%;
     animation: gradientBG 15s ease infinite;
@@ -183,6 +191,15 @@ nav {
 .hero-content p {
     font-size: 1.1rem;
     margin-bottom: 30px;
+}
+
+.hero-image img {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid #4a6fa5;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 #hero {
@@ -421,6 +438,13 @@ nav {
     object-fit: cover;
     border-radius: 50%;
     box-shadow: var(--shadow);
+    border: 3px solid rgba(241, 236, 160, 0.881);
+    box-shadow: 20px 20px 40px rgba(72, 72, 72, 0.559) !important;
+
+}
+
+.about-img img:hover{
+    transform: scale(1.03) translateY(-5px) !important;
 }
 
 .about-text {
@@ -431,6 +455,10 @@ nav {
     margin-bottom: 20px;
     font-size: 2rem;
     color: var(--secondary-color);
+}
+
+.about-text h3 {
+    color: var(--accent-color);
 }
 
 .about-text p {
@@ -457,6 +485,8 @@ nav {
     flex: 0 1 calc(33.333% - 30px);
     min-width: 250px;
     transition: var(--transition);
+    border: 2px solid #4a6fa5;
+
 }
 
 .skill-category:hover {
@@ -474,6 +504,7 @@ nav {
     display: flex;
     flex-wrap: wrap;
     gap: 10px;
+    justify-content: center;
 }
 
 .skill-tag {
@@ -510,7 +541,9 @@ nav {
 .projects-container {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    gap: 30px;
+    gap: 40px;
+    position: relative;
+    overflow: visible;
 }
 
 .project-card {
@@ -518,13 +551,17 @@ nav {
     border-radius: 10px;
     overflow: hidden;
     box-shadow: var(--shadow);
-    transition: var(--transition);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    z-index: 0;
+    border: 2px solid #4a6fa5;
+
 }
 
 .project-card:hover {
-    transform: scale(1.03);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
-    z-index: 1;
+    transform: scale(1) translateY(-5px) !important;
+    box-shadow: 0 20px 40px rgba(107, 141, 236, 0.632) !important;
+    z-index: 10;
 }
 
 .project-img {
@@ -585,7 +622,7 @@ nav {
 }
 
 .tech {
-    background-color: var(--primary-color);
+    background-color: var(--accent-color);
     color: white;
     padding: 3px 10px;
     border-radius: 15px;
@@ -598,9 +635,9 @@ nav {
 }
 
 .hover-pop:hover {
-    transform: translateY(-8px) scale(1.1);
-    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
-    z-index: 2;
+  transform: scale(1) translateY(-5px) !important;
+  box-shadow: 0 20px 40px rgba(92, 116, 194, 0.349) !important;
+  z-index: 10;  
 }
 
 /* Experience Section */
@@ -611,6 +648,7 @@ nav {
 .experience-container {
     max-width: 800px;
     margin: 0 auto;
+    z-index: 10;
 }
 
 .timeline {
@@ -635,6 +673,7 @@ nav {
     padding: 25px;
     border-radius: 10px;
     box-shadow: var(--shadow);
+
 }
 
 .timeline-item::before {
@@ -742,6 +781,7 @@ nav {
     padding: 25px;
     box-shadow: var(--shadow);
     transition: var(--transition);
+    
 }
 
 .achievement-card:hover {
@@ -756,6 +796,86 @@ nav {
 
 .achievement-card p {
     color: #666;
+}
+
+.achievement-card {
+  background: linear-gradient(135deg, #fdfbfb, #ebedee);
+  border-left: 6px solid #4a6fa5;
+  border-radius: 15px;
+  padding: 30px 25px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.achievement-card:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 12px 24px rgba(62, 138, 251, 0.2);
+}
+
+.icon-badge {
+  width: 35px;
+  height: 35px;
+  font-size: 1.5rem;
+  background-color: var(--accent-color);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  border-radius: 50%;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+
+.achievement-card h3 {
+  font-size: 1.3rem;
+  margin-bottom: 10px;
+  color: var(--primary-color);
+  font-weight: 650;
+}
+
+.achievement-card p {
+  color: #555;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+.certificates-section {
+  text-align: center;
+  padding: 60px 20px;
+  background-color: var(--light-bg);
+}
+
+.certificates-section h2 {
+  font-size: 2rem;
+  color: var(--primary-color);
+  margin-bottom: 10px;
+}
+
+.certificates-section p {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 25px;
+}
+
+.cert-btn {
+  display: inline-block;
+  padding: 12px 30px;
+  background-color: var(--primary-color);
+  color: white;
+  font-size: 1rem;
+  border-radius: 30px;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.cert-btn:hover {
+  background-color: var(--accent-color);
+  transform: scale(1.05);
 }
 
 /* Publications Section */
@@ -955,6 +1075,7 @@ footer {
 
 .certification__container {
   border: 1px solid #ccc;
+  color: #344e71;
   border-radius: 8px;
   padding: 20px;
   margin-bottom: 20px;
@@ -987,7 +1108,7 @@ footer {
   margin-bottom: 5px;
 }
 
-.certification__issued-by, .certification__date, .certification__skills {
+.certification__issued-by, .certification__date, .certification__skills, .certification__title {
   margin-bottom: 5px;
   font-size: 0.9rem;
   color: #444;
@@ -1014,7 +1135,7 @@ footer {
 
 .workshop__title {
   font-size: 1.2rem;
-  color: #4a6fa5;
+  color: #344e71;
   font-weight: bold;
   display: flex;
   flex-direction: column;
