@@ -130,6 +130,7 @@ nav {
 
 .menu-toggle {
     display: none;
+    color: var(--white);
     cursor: pointer;
     font-size: 1.5rem;
 }
@@ -542,6 +543,18 @@ nav {
 .timeline-item:hover .experience-logo {
     transform: scale(1.1);
 }
+
+.project-list {
+  padding-left: 20px;
+  margin-top: 10px;
+  color: #444;
+}
+
+.project-list li {
+  margin-bottom: 15px;
+  line-height: 1.6;
+}
+
 
 /* Projects Section */
 #projects {
@@ -1205,7 +1218,7 @@ footer {
         top: 80px;
         left: 0;
         width: 100%;
-        background-color: var(--white);
+        background-color: var(--primary-color);
         flex-direction: column;
         align-items: center;
         padding: 20px 0;
